@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/keyboard-configurator/static/css/main.db4219a1.css",
-    "main.js": "/keyboard-configurator/static/js/main.cbf6ba9d.js",
+    "main.js": "/keyboard-configurator/static/js/main.9a98882c.js",
     "index.html": "/keyboard-configurator/index.html",
     "main.db4219a1.css.map": "/keyboard-configurator/static/css/main.db4219a1.css.map",
-    "main.cbf6ba9d.js.map": "/keyboard-configurator/static/js/main.cbf6ba9d.js.map"
+    "main.9a98882c.js.map": "/keyboard-configurator/static/js/main.9a98882c.js.map"
   },
   "entrypoints": [
     "static/css/main.db4219a1.css",
-    "static/js/main.cbf6ba9d.js"
+    "static/js/main.9a98882c.js"
   ]
 }
