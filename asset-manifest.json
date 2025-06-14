@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/build-your-keyboard/static/css/main.db4219a1.css",
+    "main.js": "/build-your-keyboard/static/js/main.da8a2b1d.js",
+    "index.html": "/build-your-keyboard/index.html",
+    "main.db4219a1.css.map": "/build-your-keyboard/static/css/main.db4219a1.css.map",
+    "main.da8a2b1d.js.map": "/build-your-keyboard/static/js/main.da8a2b1d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db4219a1.css",
+    "static/js/main.da8a2b1d.js"
+  ]
+}
