@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/keyboard-configurator/static/css/main.db4219a1.css",
+    "main.js": "/keyboard-configurator/static/js/main.cbf6ba9d.js",
+    "index.html": "/keyboard-configurator/index.html",
+    "main.db4219a1.css.map": "/keyboard-configurator/static/css/main.db4219a1.css.map",
+    "main.cbf6ba9d.js.map": "/keyboard-configurator/static/js/main.cbf6ba9d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db4219a1.css",
+    "static/js/main.cbf6ba9d.js"
+  ]
+}

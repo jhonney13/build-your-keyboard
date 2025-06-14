@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'sans-serif';
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+}
+
+/* Custom styles */
+.keyboard-preview {
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.keyboard-preview:hover {
+  box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.15), 0 6px 12px -3px rgba(0, 0, 0, 0.1);
+}
+
+.option-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 2px solid transparent;
+}
+
+.option-button:hover {
+  border-color: #93c5fd;
+}
+
+.option-button.selected {
+  box-shadow: 0 0 0 2px #3b82f6, 0 4px 12px -2px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(145deg, #ffffff, #eff6ff);
+  border-color: #3b82f6;
+}
+
+/* Custom slider thumb for zoom control */
+input[type=range]::-webkit-slider-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #3b82f6, #2563eb);
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+  background: linear-gradient(145deg, #2563eb, #1d4ed8);
+  box-shadow: 0 6px 16px rgba(37,99,235,0.3);
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #3b82f6, #2563eb);
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type=range]:focus::-moz-range-thumb {
+  background: linear-gradient(145deg, #2563eb, #1d4ed8);
+  box-shadow: 0 6px 16px rgba(37,99,235,0.3);
+}
+
+input[type=range]::-ms-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #3b82f6, #2563eb);
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+input[type=range]:focus::-ms-thumb {
+  background: linear-gradient(145deg, #2563eb, #1d4ed8);
+  box-shadow: 0 6px 16px rgba(37,99,235,0.3);
+}
+
+input[type=range] {
+  accent-color: #2563eb;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #93c5fd 100%);
+  border-radius: 2px;
+}
+
+/* Progress bar animation */
+@keyframes progress-bounce {
+  0% { transform: scaleX(0); }
+  50% { transform: scaleX(1.1); }
+  100% { transform: scaleX(1); }
+}
+
+.progress-bounce {
+  animation: progress-bounce 0.5s ease-out;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Price summary card enhancement */
+.price-summary {
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.price-summary:hover {
+  box-shadow: 0 12px 20px -6px rgba(0, 0, 0, 0.15);
+}
+
+/* Stepper enhancement */
+.stepper-step {
+  transition: all 0.3s ease;
+}
+
+.stepper-step:hover {
+  transform: translateY(-2px);
+}
+
+/* Image hover effects */
+img {
+  transition: all 0.3s ease;
+}
+
+/* Remove global image hover effect */
+/* img:hover {
+  transform: scale(1.02);
+} */ 
