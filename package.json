@@ -2,7 +2,7 @@
   "name": "build-your-keyboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://jhonney13.github.io/build-your-keyboard",
+  "homepage": "https://customizer.nimbusgaming.in",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
