@@ -1,4 +1,4 @@
-# Keyboard Configurator
+# build-your-keyboard
 
 A React-based keyboard configurator that allows users to customize their keyboard by selecting different components and seeing a live preview.
 

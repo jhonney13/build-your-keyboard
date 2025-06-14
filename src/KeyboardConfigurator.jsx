@@ -173,14 +173,53 @@ const SelectionOptions = ({ options, selected, onSelect, type, scale }) => {
               : 'border-gray-200'}
           `}
         >
-          <img
-            src={type === 'switches' 
-              ? `${process.env.PUBLIC_URL}/images/Switches Logo/${switchThumbnailMap[option.value] || 'blue.png'}`
-              : `${process.env.PUBLIC_URL}/images/${type}/${option.value}.png`}
-            alt={option.label}
-            loading="lazy"
-            className="w-16 h-16 object-contain mb-1"
-          />
+          {type === 'body' && (
+            <div
+              style={{
+                background: option.color,
+                borderRadius: '50%',
+                width: 32,
+                height: 32,
+                border: selected === option.value ? '2px solid #2563eb' : '2px solid #ccc',
+                margin: '0 auto'
+              }}
+              className="mb-1"
+            />
+          )}
+          {type === 'plate' && (
+            <div
+              style={{
+                background: option.gradient,
+                borderRadius: '50%',
+                width: 32,
+                height: 32,
+                border: selected === option.value ? '2px solid #2563eb' : '2px solid #ccc',
+                margin: '0 auto'
+              }}
+              className="mb-1"
+            />
+          )}
+          {type === 'keycaps' && (
+            <div
+              style={{
+                background: option.gradient,
+                borderRadius: '50%',
+                width: 32,
+                height: 32,
+                border: selected === option.value ? '2px solid #2563eb' : '2px solid #ccc',
+                margin: '0 auto'
+              }}
+              className="mb-1"
+            />
+          )}
+          {type === 'switches' && (
+            <img
+              src={`${process.env.PUBLIC_URL}/images/Switches Logo/${switchThumbnailMap[option.value] || 'blue.png'}`}
+              alt={option.label}
+              loading="lazy"
+              className="w-16 h-16 object-contain mb-1"
+            />
+          )}
           <p className={`mt-1 text-sm font-medium text-center ${selected === option.value ? 'text-blue-700' : 'text-gray-700'}`}>{option.label}</p>
         </button>
       ))}
@@ -274,23 +313,23 @@ const KeyboardConfigurator = () => {
 
   const options = {
     body: [
-      { value: 'body-black', label: 'Black' },
-      { value: 'body-gray', label: 'Gray' },
-      { value: 'body-blue', label: 'Blue' },
-      { value: 'body-red', label: 'Red' },
-      { value: 'body-light-green', label: 'Light Green' },
-      { value: 'body-green', label: 'Green' },
-      { value: 'body-yellow', label: 'Yellow' },
-      { value: 'body-skin', label: 'Skin' },
-      { value: 'body-pink', label: 'Pink' },
-      { value: 'body-orange', label: 'Orange' },
-      { value: 'body-white', label: 'White' }
+      { value: 'body-black', label: 'Black', color: '#000000' },
+      { value: 'body-gray', label: 'Gray', color: '#cccccc' },
+      { value: 'body-blue', label: 'Blue', color: '#2196F3' },
+      { value: 'body-red', label: 'Red', color: '#E53935' },
+      { value: 'body-light-green', label: 'Light Green', color: '#8BC34A' },
+      { value: 'body-green', label: 'Green', color: '#388E3C' },
+      { value: 'body-yellow', label: 'Yellow', color: '#FFEB3B' },
+      { value: 'body-skin', label: 'Skin', color: '#FFDAB9' },
+      { value: 'body-pink', label: 'Pink', color: '#E91E63' },
+      { value: 'body-orange', label: 'Orange', color: '#FF9800' },
+      { value: 'body-white', label: 'White', color: '#FFFFFF' }
     ],
     plate: [
-      { value: 'plate-mirror', label: 'Mirror' },
-      { value: 'plate-rose-gold', label: 'Rose Gold' },
-      { value: 'plate-matte', label: 'Matte' },
-      { value: 'plate-gold', label: 'Gold' }
+      { value: 'plate-mirror', label: 'Mirror', gradient: 'linear-gradient(135deg, #e3e4e6 60%, #ffffff 100%)' },
+      { value: 'plate-rose-gold', label: 'Rose Gold', gradient: 'linear-gradient(135deg, #b76e79 60%, #ffd1dc 100%)' },
+      { value: 'plate-matte', label: 'Matte', gradient: 'linear-gradient(135deg, #757575 60%, #bdbdbd 100%)' },
+      { value: 'plate-gold', label: 'Gold', gradient: 'linear-gradient(135deg, #FFD700 60%, #FFF8DC 100%)' }
     ],
     switches: [
       { value: 'switches-blue', label: 'Blue' },
@@ -304,18 +343,18 @@ const KeyboardConfigurator = () => {
       { value: 'switches-Jadeite-Switch-(Pre-Lubed)', label: 'Jadeite (Lubed)' }
     ],
     keycaps: [
-      { value: 'keycaps-white', label: 'White' },
-      { value: 'keycaps-black', label: 'Black' },
-      { value: 'keycaps-red', label: 'Red' },
-      { value: 'keycaps-white-red', label: 'White-Red' },
-      { value: 'keycaps-red-white', label: 'Red-White' },
-      { value: 'keycaps-black-white', label: 'Black-White' },
-      { value: 'keycaps-Black-Beige-Cherry-Doubleshot-PBT-Keycaps', label: 'Black Beige' },
-      { value: 'keycaps-Dark-Knight-Kingdom-Doubleshot-Cherry-PBT-Keycaps', label: 'Dark Knight' },
-      { value: 'keycaps-Dark-Red-White-Cherry-Doubleshot-PBT-Keycaps', label: 'Dark Red White' },
-      { value: 'keycaps-Green-White-Cherry-Doubleshot-PBT-Keycaps', label: 'Green White' },
-      { value: 'keycaps-Blue-White-Cherry-Doubleshot-PBT-Keycaps', label: 'Blue White' },
-      { value: 'keycaps-Classic-Red-Quality-Cherry-Doubleshot-PBT-Keycaps', label: 'Classic Red' }
+      { value: 'keycaps-white', label: 'White', gradient: 'linear-gradient(135deg, #f8f8f8 60%, #e0e0e0 100%)' },
+      { value: 'keycaps-black', label: 'Black', gradient: 'linear-gradient(135deg, #222 60%, #555 100%)' },
+      { value: 'keycaps-red', label: 'Red', gradient: 'linear-gradient(135deg, #e53935 60%, #ffb3b3 100%)' },
+      { value: 'keycaps-white-red', label: 'White-Red', gradient: 'linear-gradient(135deg, #fff 60%, #e53935 100%)' },
+      { value: 'keycaps-red-white', label: 'Red-White', gradient: 'linear-gradient(135deg, #e53935 60%, #fff 100%)' },
+      { value: 'keycaps-black-white', label: 'Black-White', gradient: 'linear-gradient(135deg, #222 60%, #fff 100%)' },
+      { value: 'keycaps-Black-Beige-Cherry-Doubleshot-PBT-Keycaps', label: 'Beige', gradient: 'linear-gradient(135deg, #f5e9da 60%, #f3e2c7 100%)' },
+      { value: 'keycaps-Dark-Knight-Kingdom-Doubleshot-Cherry-PBT-Keycaps', label: 'Dark Knight', gradient: 'linear-gradient(135deg, #232a34 60%, #607d8b 100%)' },
+      { value: 'keycaps-Dark-Red-White-Cherry-Doubleshot-PBT-Keycaps', label: 'Dark Red', gradient: 'linear-gradient(135deg, #8b1c1c 60%, #fff 100%)' },
+      { value: 'keycaps-Green-White-Cherry-Doubleshot-PBT-Keycaps', label: 'Green', gradient: 'linear-gradient(135deg, #388e3c 60%, #fff 100%)' },
+      { value: 'keycaps-Blue-White-Cherry-Doubleshot-PBT-Keycaps', label: 'Blue', gradient: 'linear-gradient(135deg, #2196f3 60%, #fff 100%)' },
+      { value: 'keycaps-Classic-Red-Quality-Cherry-Doubleshot-PBT-Keycaps', label: 'Classic Red', gradient: 'linear-gradient(135deg, #b71c1c 60%, #fff 100%)' }
     ]
   };
 
@@ -478,9 +517,9 @@ const KeyboardConfigurator = () => {
               </div>
               <button
                 onClick={async () => {
-                  const storefrontAccessToken = "0e7e4357867db232cd1e866cfc498f38";
-                  const shopifyDomain = "jgypac-4j.myshopify.com";
-                  const merchandiseId = "gid://shopify/ProductVariant/51366442205458";
+                  const storefrontAccessToken = process.env.REACT_APP_SHOPIFY_STOREFRONT_TOKEN;
+                  const shopifyDomain = process.env.REACT_APP_SHOPIFY_DOMAIN;
+                  const merchandiseId = process.env.REACT_APP_MERCHANDISE_ID;
 
                   const attributes = [
                     { key: "Body", value: selectedParts.body.replace("body-", "") },
