@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/build-your-keyboard/static/css/main.c9160920.css",
-    "main.js": "/build-your-keyboard/static/js/main.550ac88f.js",
-    "index.html": "/build-your-keyboard/index.html",
-    "main.c9160920.css.map": "/build-your-keyboard/static/css/main.c9160920.css.map",
-    "main.550ac88f.js.map": "/build-your-keyboard/static/js/main.550ac88f.js.map"
+    "main.css": "/static/css/main.c9160920.css",
+    "main.js": "/static/js/main.71799fad.js",
+    "index.html": "/index.html",
+    "main.c9160920.css.map": "/static/css/main.c9160920.css.map",
+    "main.71799fad.js.map": "/static/js/main.71799fad.js.map"
   },
   "entrypoints": [
     "static/css/main.c9160920.css",
-    "static/js/main.550ac88f.js"
+    "static/js/main.71799fad.js"
   ]
 }
